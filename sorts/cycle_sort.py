@@ -10,9 +10,6 @@ class Comparable(Protocol):
     def __lt__(self, other: object, /) -> bool: ...
 
 
-
-
-
 def cycle_sort[T: Comparable](array: list[T]) -> list[T]:
     """
     >>> cycle_sort([4, 3, 2, 1])
@@ -26,7 +23,7 @@ def cycle_sort[T: Comparable](array: list[T]) -> list[T]:
 
     >>> cycle_sort([])
     []
-    
+
     >>> cycle_sort(["d", "a", "c", "b"])
     ['a', 'b', 'c', 'd']
     >>> cycle_sort([2.5, -1.0, 0.0])
