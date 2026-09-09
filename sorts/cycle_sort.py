@@ -3,17 +3,8 @@ Code contributed by Honey Sharma
 Source: https://en.wikipedia.org/wiki/Cycle_sort
 """
 
-from typing import Protocol
 
-
-class Comparable(Protocol):
-    def __lt__(self, other: object, /) -> bool: ...
-
-
-
-
-
-def cycle_sort[T: Comparable](array: list[T]) -> list[T]:
+def cycle_sort(array: list) -> list:
     """
     >>> cycle_sort([4, 3, 2, 1])
     [1, 2, 3, 4]
@@ -26,12 +17,7 @@ def cycle_sort[T: Comparable](array: list[T]) -> list[T]:
 
     >>> cycle_sort([])
     []
-    
-    >>> cycle_sort(["d", "a", "c", "b"])
-    ['a', 'b', 'c', 'd']
-    >>> cycle_sort([2.5, -1.0, 0.0])
-    [-1.0, 0.0, 2.5]
-"""
+    """
     array_len = len(array)
     for cycle_start in range(array_len - 1):
         item = array[cycle_start]

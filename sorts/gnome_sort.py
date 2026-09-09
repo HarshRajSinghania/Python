@@ -19,9 +19,6 @@ class Comparable(Protocol):
     def __lt__(self, other: object, /) -> bool: ...
 
 
-
-
-
 def gnome_sort[T: Comparable](lst: list[T]) -> list[T]:
     """
     Pure implementation of the gnome sort algorithm in Python
@@ -41,7 +38,7 @@ def gnome_sort[T: Comparable](lst: list[T]) -> list[T]:
 
     >>> "".join(gnome_sort(list(set("Gnomes are stupid!"))))
     ' !Gadeimnoprstu'
-    
+
     >>> gnome_sort(["d", "a", "c", "b"])
     ['a', 'b', 'c', 'd']
     >>> gnome_sort([2.5, -1.0, 0.0])
