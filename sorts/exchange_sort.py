@@ -1,11 +1,4 @@
-from typing import Protocol
-
-
-class Comparable(Protocol):
-    def __lt__(self, other: object, /) -> bool: ...
-
-
-def exchange_sort[T: Comparable](numbers: list[T]) -> list[T]:
+def exchange_sort(numbers: list[int]) -> list[int]:
     """
     Uses exchange sort to sort a list of numbers.
     Source: https://en.wikipedia.org/wiki/Sorting_algorithm#Exchange_sort
@@ -19,12 +12,7 @@ def exchange_sort[T: Comparable](numbers: list[T]) -> list[T]:
     [-2, 0, 3, 5, 10]
     >>> exchange_sort([])
     []
-    
-    >>> exchange_sort(["d", "a", "c", "b"])
-    ['a', 'b', 'c', 'd']
-    >>> exchange_sort([2.5, -1.0, 0.0])
-    [-1.0, 0.0, 2.5]
-"""
+    """
     numbers_length = len(numbers)
     for i in range(numbers_length):
         for j in range(i + 1, numbers_length):

@@ -11,9 +11,6 @@ class Comparable(Protocol):
     def __lt__(self, other: object, /) -> bool: ...
 
 
-
-
-
 def cocktail_shaker_sort[T: Comparable](arr: list[T]) -> list[T]:
     """
     Sorts a list using the Cocktail Shaker Sort algorithm.
@@ -37,7 +34,7 @@ def cocktail_shaker_sort[T: Comparable](arr: list[T]) -> list[T]:
     Traceback (most recent call last):
         ...
     TypeError: 'tuple' object does not support item assignment
-    
+
     >>> cocktail_shaker_sort(["elderberry", "banana", "date", "apple", "cherry"])
     ['apple', 'banana', 'cherry', 'date', 'elderberry']
     >>> cocktail_shaker_sort([3.2, -1.1, 2.4, 0.5])
