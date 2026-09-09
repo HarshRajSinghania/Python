@@ -19,7 +19,7 @@ def exchange_sort[T: Comparable](numbers: list[T]) -> list[T]:
     [-2, 0, 3, 5, 10]
     >>> exchange_sort([])
     []
-    
+
     >>> exchange_sort(["d", "a", "c", "b"])
     ['a', 'b', 'c', 'd']
     >>> exchange_sort([2.5, -1.0, 0.0])
